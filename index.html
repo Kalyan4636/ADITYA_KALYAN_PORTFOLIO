@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditya Kalyan | Data Analytics Trainer &amp; Mentor Portfolio</title>
+
+<!--
+  EDIT ME: SEO / GOOGLE VISIBILITY
+  This description is what shows up under your title in Google
+  search results and when you share the link on LinkedIn/WhatsApp.
+  Replace it with 1-2 sentences about who you are.
+  Also replace "https://kalyan4636.github.io/" everywhere below
+  with your real GitHub Pages URL once you know it (Step 3 below).
+-->
+<meta name="description" content="Aditya Kalyan — Data Analyst skilled in Excel, SQL and Power BI. Portfolio of data analytics projects and dashboards.">
+<meta name="author" content="Aditya Kalyan">
+<link rel="canonical" href="https://kalyan4636.github.io/">
+
+<!-- These tags control the preview card when your link is shared on LinkedIn, X, WhatsApp etc. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aditya Kalyan | Data Analyst Portfolio">
+<meta property="og:description" content="Data Analyst skilled in Excel, SQL and Power BI — view my projects and get in touch.">
+<meta property="og:url" content="https://kalyan4636.github.io/">
+<meta property="og:image" content="https://kalyan4636.github.io/images/profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!--
+  ============================================================
+  WELCOME! This file is built to be edited by YOU, right on
+  GitHub, using the little pencil (Edit) icon on any file page.
+  You do not need to install anything or know how to code.
+
+  Every place you need to change something has a comment like
+  this one, written in plain English, right above it.
+
+  Search tips (Ctrl+F / Cmd+F) — look for these markers:
+    EDIT ME: NAME & TITLE
+    EDIT ME: PROFILE PHOTO
+    EDIT ME: BIO
+    EDIT ME: PROJECT CARD
+    EDIT ME: CONTACT INFO
+    EDIT ME: SOCIAL LINKS
+    EDIT ME: FOOTER
+    EDIT ME: SEO / GOOGLE VISIBILITY
+  ============================================================
+-->
+
+<!-- Google Fonts: Source Sans 3 (body text) + Source Serif 4 (headings) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome icon library (for the social icons and UI icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+  /* ============================================================
+     ALL CSS LIVES HERE — no external stylesheet needed.
+     You generally will not need to touch this section unless
+     you want to change colours, spacing or fonts.
+     ============================================================ */
+
+  :root{
+    --accent: #5e81ac;       /* <-- change this one value to re-theme the whole site */
+    --text-dark: #2e3440;
+    --text-mid: #4c566a;
+    --text-light: #7b8794;
+    --border: #e5e9f0;
+    --bg: #ffffff;
+    --sidebar-width: 280px;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-dark);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4{
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  a{ color: var(--accent); text-decoration: none; transition: color .2s ease; }
+  a:hover{ color: var(--text-dark); }
+
+  img{ max-width: 100%; display:block; }
+
+  /* ---------- Top Header Bar ---------- */
+  .top-header{
+    position: fixed;
+    top: 0;
+    left: var(--sidebar-width);
+    right: 0;
+    height: 64px;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    z-index: 100;
+  }
+
+  .top-header .logo{
+    font-family: 'Source Serif 4', serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    letter-spacing: .5px;
+  }
+
+  .top-header .logo span{ color: var(--accent); }
+
+  .top-header .header-socials a{
+    color: var(--text-mid);
+    font-size: 1.05rem;
+    margin-left: 1.1rem;
+  }
+
+  .top-header .header-socials a:hover{ color: var(--accent); }
+
+  /* ---------- Left Sidebar ---------- */
+  .sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    background: #fafbfc;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 2rem;
+    z-index: 200;
+  }
+
+  .sidebar .brand{
+    margin-bottom: 2.5rem;
+  }
+
+  .sidebar .brand h1{
+    font-size: 1.35rem;
+    line-height: 1.3;
+  }
+
+  .sidebar .brand p{
+    color: var(--accent);
+    font-size: .92rem;
+    font-weight: 600;
+    margin-top: .4rem;
+  }
+
+  .sidebar nav{ flex: 1; }
+
+  .sidebar nav ul{ list-style: none; }
+
+  .sidebar nav li{ margin-bottom: .3rem; }
+
+  .sidebar nav a{
+    display: block;
+    padding: .6rem 0;
+    font-size: .95rem;
+    font-weight: 600;
+    color: var(--text-mid);
+    letter-spacing: .3px;
+    border-left: 3px solid transparent;
+    padding-left: .9rem;
+    transition: all .2s ease;
+  }
+
+  .sidebar nav a:hover{
+    color: var(--accent);
+    border-left-color: var(--accent);
+  }
+
+  .sidebar .sidebar-socials{
+    display: flex;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .sidebar .sidebar-socials a{
+    color: var(--text-mid);
+    font-size: 1.1rem;
+  }
+
+  .sidebar .sidebar-socials a:hover{ color: var(--accent); }
+
+  /* ---------- Page wrapper (offset for fixed sidebar + header) ---------- */
+  .page{
+    margin-left: var(--sidebar-width);
+    padding-top: 64px;
+  }
+
+  section{
+    padding: 5rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ---------- Banner / About ---------- */
+  .banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .banner .bio-text{ flex: 1 1 420px; }
+
+  .banner .bio-text h2{
+    font-size: 2.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .banner .bio-text p{
+    color: var(--text-mid);
+    font-size: 1.05rem;
+    max-width: 560px;
+  }
+
+  .banner .photo-wrap{
+    flex: 0 0 auto;
+  }
+
+  .photo-circle{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--accent);
+    background: #eef1f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .photo-circle img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .photo-circle .placeholder-icon{
+    font-size: 3.5rem;
+    color: #c2c9d6;
+  }
+
+  /* ---------- Section headings shared style ---------- */
+  .section-heading{
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-heading h2{
+    font-size: 2rem;
+    display: inline-block;
+    position: relative;
+    padding-bottom: .8rem;
+  }
+
+  .section-heading h2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 3px;
+    background: var(--accent);
+  }
+
+  /* ---------- Projects Grid ---------- */
+  .projects-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .project-card{
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform .25s ease, box-shadow .25s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(46, 52, 64, 0.1);
+  }
+
+  .project-card .project-image{
+    width: 100%;
+    height: 180px;
+    background: #eef1f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .project-card .project-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-card .project-image .placeholder-icon{
+    font-size: 2.5rem;
+    color: #c2c9d6;
+  }
+
+  .project-card .project-body{
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .project-card h3{
+    font-size: 1.15rem;
+    margin-bottom: .6rem;
+  }
+
+  .project-card p{
+    color: var(--text-mid);
+    font-size: .93rem;
+    flex: 1;
+    margin-bottom: 1.2rem;
+  }
+
+  .btn-view{
+    display: inline-block;
+    align-self: flex-start;
+    background: var(--accent);
+    color: #fff;
+    font-size: .85rem;
+    font-weight: 600;
+    padding: .55rem 1.2rem;
+    border-radius: 4px;
+    letter-spacing: .3px;
+  }
+
+  .btn-view:hover{
+    background: var(--text-dark);
+    color: #fff;
+  }
+
+  /* ---------- Contact Section ---------- */
+  .contact-list{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .contact-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+
+  .contact-item i{
+    color: var(--accent);
+    font-size: 1.3rem;
+    width: 28px;
+    text-align: center;
+  }
+
+  .contact-item span, .contact-item a{
+    font-size: .98rem;
+    color: var(--text-dark);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top: 1px solid var(--border);
+    padding: 2rem 3rem;
+    text-align: center;
+    color: var(--text-light);
+    font-size: .88rem;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px){
+    .projects-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px){
+    :root{ --sidebar-width: 0px; }
+
+    .sidebar{
+      position: relative;
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      flex-direction: column;
+    }
+
+    .sidebar nav ul{
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.2rem;
+    }
+
+    .top-header{
+      left: 0;
+      position: sticky;
+    }
+
+    .page{ margin-left: 0; padding-top: 0; }
+
+    .banner{ flex-direction: column-reverse; text-align: center; }
+    .banner .bio-text p{ margin: 0 auto; }
+
+    .projects-grid{ grid-template-columns: 1fr; }
+
+    section{ padding: 3rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ============================================================
+       LEFT SIDEBAR
+       EDIT ME: NAME & TITLE — change the text inside the <h1> and
+       the <p> just below it.
+       EDIT ME: SOCIAL LINKS — replace the href="#" values further
+       down with your real profile URLs (LinkedIn, GitHub, email).
+       ============================================================ -->
+  <aside class="sidebar">
+    <div class="brand">
+      <!-- EDIT ME: NAME & TITLE — put your full name here -->
+      <h1>Aditya Kalyan</h1>
+      <!-- put your job title here, e.g. "Data Analyst | Excel · SQL · Power BI" -->
+      <p>Data Analytics Trainer &amp; Mentor | SQL · Python · Power BI</p>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- EDIT ME: SOCIAL LINKS — replace each "#" with your real profile link -->
+    <div class="sidebar-socials">
+      <a href="https://www.linkedin.com/in/adityaakalyan/" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/Kalyan4636" title="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:adityakalyanbscc@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       TOP HEADER BAR
+       You usually don't need to edit this — it's just the logo
+       text ("Portfolio") and matching social icons at the top.
+       ============================================================ -->
+  <header class="top-header">
+    <div class="logo">Port<span>folio</span></div>
+    <div class="header-socials">
+      <!-- EDIT ME: SOCIAL LINKS — same links as the sidebar, replace "#" -->
+      <a href="https://www.linkedin.com/in/adityaakalyan/" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/Kalyan4636" title="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:adityakalyanbscc@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </header>
+
+  <div class="page">
+
+    <!-- ============================================================
+         BANNER / ABOUT SECTION
+         EDIT ME: BIO — replace the paragraph text with 3-4 sentences
+         about your background, tools you use, and what you're open to.
+         EDIT ME: PROFILE PHOTO — see instructions inside photo-wrap below.
+         ============================================================ -->
+    <section id="about" class="banner">
+      <div class="bio-text">
+        <h2>Hi, I'm Aditya Kalyan 👋</h2>
+        <!--
+          EDIT ME: BIO
+          Write 3-4 sentences in FIRST PERSON about:
+            1) your background (studies / experience)
+            2) the tools you use daily (e.g. Excel, SQL, Power BI, Python)
+            3) what kind of work you're open to (full-time roles,
+               freelance projects, consulting, etc.)
+          Replace the whole paragraph below with your own words.
+        -->
+        <p>
+          I'm a Data Analytics Trainer and Mentor, currently pursuing a B.Tech
+          in Computer Science (AI), and I've guided 1000+ learners into
+          job-ready analytics careers. My day-to-day toolkit is Excel, SQL,
+          Python and Power BI, and I focus on turning raw data into
+          actionable business insights through hands-on dashboards and
+          workflows. I'm open to training partnerships, mentoring
+          collaborations, freelance analytics projects and speaking
+          opportunities — if that sounds like a fit, let's connect.
+        </p>
+      </div>
+
+      <div class="photo-wrap">
+        <!--
+          EDIT ME: PROFILE PHOTO
+          Step 1: Upload your photo into the "images" folder in this
+                  GitHub repository (name it something like "profile.jpg").
+          Step 2: Replace the line below that says:
+                     <i class="fa-solid fa-user placeholder-icon"></i>
+                  with:
+                     <img src="images/profile.jpg" alt="Aditya Kalyan">
+          That's it — your real photo will now show up in the circle.
+        -->
+        <div class="photo-circle">
+          <i class="fa-solid fa-user placeholder-icon"></i>
+          <!-- <img src="images/profile.jpg" alt="Aditya Kalyan"> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJECTS SECTION
+         EDIT ME: PROJECT CARD — everything you need to change is
+         marked inside the first card below. To add more projects,
+         copy the ENTIRE <div class="project-card"> ... </div> block
+         and paste it again inside <div class="projects-grid">,
+         then edit the copy's image, title, description and link.
+         ============================================================ -->
+    <section id="projects">
+      <div class="section-heading">
+        <h2>Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- ====== PROJECT CARD START — copy from here... ====== -->
+        <div class="project-card">
+
+          <!--
+            EDIT ME: PROJECT IMAGE
+            Step 1: Upload a screenshot of your project into the
+                    "images" folder (e.g. "images/project1.jpg").
+            Step 2: Replace the line below that says:
+                       <i class="fa-solid fa-chart-simple placeholder-icon"></i>
+                     with:
+                       <img src="images/project1.jpg" alt="Project title">
+          -->
+          <div class="project-image">
+            <i class="fa-solid fa-chart-simple placeholder-icon"></i>
+            <!-- <img src="images/project1.jpg" alt="Sales Dashboard"> -->
+          </div>
+
+          <div class="project-body">
+            <!-- EDIT ME: PROJECT TITLE — replace the text below -->
+            <h3>Food Delivery Analytics Dashboard (Power BI)</h3>
+
+            <!-- EDIT ME: PROJECT DESCRIPTION — replace the text below -->
+            <p>
+              An end-to-end Power BI project analyzing Zomato-style order
+              trends, revenue and restaurant performance — built with a star
+              schema data model and DAX measures on top of raw Excel data.
+            </p>
+
+            <!--
+              EDIT ME: PROJECT LINK
+              Replace href="#" with a real link to your project —
+              for example a Power BI published report, a GitHub repo,
+              or a Medium article about the project.
+            -->
+            <a href="https://github.com/Kalyan4636/Food-Delivery-Analytics-Dashboard-Using-POWER-BI-" class="btn-view" target="_blank" rel="noopener">View Project</a>
+          </div>
+        </div>
+        <!-- ====== ...PROJECT CARD END — copy to here. ======
+             Paste the copied block right below this comment,
+             inside the same projects-grid div, to add another card. -->
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT SECTION
+         EDIT ME: CONTACT INFO — replace the email, LinkedIn URL and
+         location text below with your own details.
+         ============================================================ -->
+    <section id="contact">
+      <div class="section-heading">
+        <h2>Contact</h2>
+      </div>
+
+      <div class="contact-list">
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <!-- EDIT ME: CONTACT INFO — replace with your real email address (both places) -->
+          <a href="mailto:adityakalyanbscc@gmail.com">adityakalyanbscc@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-brands fa-linkedin"></i>
+          <!-- EDIT ME: CONTACT INFO — replace href and visible text with your LinkedIn URL -->
+          <a href="https://www.linkedin.com/in/adityaakalyan/" target="_blank" rel="noopener">linkedin.com/in/adityaakalyan</a>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <!-- EDIT ME: CONTACT INFO — replace with your city and country -->
+          <span>India</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         EDIT ME: FOOTER — replace "Aditya Kalyan" with your name.
+         The year updates itself automatically, no need to touch it.
+         ============================================================ -->
+    <footer>
+      <p>&copy; <span id="year"></span> Aditya Kalyan. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    // Automatically fills in the current year in the footer.
+    // You do not need to edit this.
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

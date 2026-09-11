@@ -1,0 +1,7 @@
+# This file tells Google (and other search engines) they're allowed
+# to crawl and index your whole site. You don't need to edit this.
+User-agent: *
+Allow: /
+
+# Replace with your real GitHub Pages URL once your site is live.
+Sitemap: https://kalyan4636.github.io/sitemap.xml
